@@ -89,12 +89,12 @@ const theme = useTheme();
             <Box mr="20px">
               <VXCPrice vxcPriceUsd={vxcPriceUsd} color={darkColors.textSubtle as keyof Colors} />
             </Box>
-            <Box mr="20px">
+            {/* <Box mr="20px">
               <VChipPrice vchipPriceUsd={vchipPriceUsd} color={darkColors.textSubtle as keyof Colors} />
             </Box>
             <Box mr="20px">
               <BankPrice bankPriceUsd={bankPriceUsd} color={darkColors.textSubtle as keyof Colors} />
-            </Box>
+            </Box> */}
             <Button
               as="a"
               href="https://localhost:3000/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"

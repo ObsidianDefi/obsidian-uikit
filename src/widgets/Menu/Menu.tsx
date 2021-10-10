@@ -141,11 +141,12 @@ const Menu: React.FC<NavProps> = ({
           <>
             <Box mr="36px">
               <VXCPrice vxcPriceUsd={vxcPriceUsd} isDark={theme.isDark} />
-            </Box><Box mr="36px">
+            </Box>
+            {/* <Box mr="36px">
               <VChipPrice vchipPriceUsd={vchipPriceUsd} isDark={theme.isDark} />
             </Box><Box mr="36px">
               <BankPrice bankPriceUsd={bankPriceUsd} isDark={theme.isDark} />
-            </Box>
+            </Box> */}
           </>
         )}
         <Box mt="4px">
