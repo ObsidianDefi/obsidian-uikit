@@ -57,7 +57,7 @@ const PanelFooter: React.FC<Props> = ({
   return (
     <Container>
       <SocialEntry>
-        <VXCPrice vxcPriceUsd={vxcPriceUsd} isDark={isDark} />
+        {/* <VXCPrice vxcPriceUsd={vxcPriceUsd} isDark={isDark} /> */}
         <SocialLinks />
       </SocialEntry>
       <SettingsEntry>
