@@ -837,13 +837,13 @@ var Icon$E = function (props) {
                 React__default["default"].createElement("stop", { offset: "1", stopColor: "#8D4104" })))));
 };
 
-var ObsidianRound = function (_a) {
+var Obsidian = function (_a) {
     var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
     var imgSrc = isDark ? "/images/logos/obsidiandemonlogoflat.png" : "/images/logos/obsidianangellogoflat.png";
-    return (React__default["default"].createElement(Svg, __assign({ viewBox: "0 0 92 92" }, props),
+    return (React__default["default"].createElement(Svg, __assign({ viewBox: "0 0 91 91" }, props),
         React__default["default"].createElement("image", { width: "90", height: "90", href: imgSrc })));
 };
-var ObsidianRound$1 = React__default["default"].memo(ObsidianRound, function (prev, next) { return prev.isDark === next.isDark; });
+var ObsidianRound = React__default["default"].memo(Obsidian, function (prev, next) { return prev.isDark === next.isDark; });
 
 var ObsidianRoundSml = function (_a) {
     var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
@@ -1295,7 +1295,7 @@ var IconModule = /*#__PURE__*/Object.freeze({
     PancakesIcon: Icon$G,
     PencilIcon: Icon$F,
     PancakeRoundIcon: Icon$E,
-    ObsidianRound: ObsidianRound$1,
+    ObsidianRound: ObsidianRound,
     ObsidianRoundSml: ObsidianRoundSml$1,
     VChipRound: vChipRound$1,
     BankRound: BankRound$1,
@@ -4149,7 +4149,7 @@ var MenuItem$1 = function (_a) {
     return (React__default["default"].createElement(StyledFooter, __assign({ p: ["40px 16px", null, "56px 40px 55px 40px"] }, props, { justifyContent: "center" }),
         React__default["default"].createElement(Flex$1, { flexDirection: "column", width: ["100%", null, "1200px;"] },
             React__default["default"].createElement(StyledIconMobileContainer, { display: ["block", null, "none"] },
-                React__default["default"].createElement(ObsidianRound$1, { isDark: true, width: "130px" })),
+                React__default["default"].createElement(ObsidianRound, { isDark: true, width: "130px" })),
             React__default["default"].createElement(Flex$1, { order: [2, null, 1], flexDirection: ["column", null, "row"], justifyContent: "space-between", alignItems: "flex-start", mb: ["42px", null, "36px"] }, items === null || items === void 0 ? void 0 :
                 items.map(function (item) {
                     var _a;
@@ -4162,7 +4162,7 @@ var MenuItem$1 = function (_a) {
                         })));
                 }),
                 React__default["default"].createElement(Box, { display: ["none", null, "block"] },
-                    React__default["default"].createElement(ObsidianRound$1, { isDark: true, width: "160px" }))),
+                    React__default["default"].createElement(ObsidianRound, { isDark: true, width: "160px" }))),
             React__default["default"].createElement(StyledSocialLinks, { order: [2], pb: ["42px", null, "32px"], mb: ["0", null, "32px"] }),
             React__default["default"].createElement(StyledToolsContainer, { order: [1, null, 3], flexDirection: ["column", null, "row"], justifyContent: "space-between" },
                 React__default["default"].createElement(Flex$1, { order: [2, null, 1], alignItems: "center" },
@@ -5061,7 +5061,7 @@ exports.MoreHorizontalIcon = Icon$K;
 exports.MoreVerticalIcon = Icon$J;
 exports.NoProfileAvatarIcon = Icon$I;
 exports.NotificationDot = NotificationDot;
-exports.ObsidianRound = ObsidianRound$1;
+exports.ObsidianRound = ObsidianRound;
 exports.ObsidianRoundSml = ObsidianRoundSml$1;
 exports.OpenNewIcon = Icon$H;
 exports.Overlay = Overlay;

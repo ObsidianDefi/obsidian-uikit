@@ -60,7 +60,7 @@ export { default as OpenNewIcon } from "./Icons/OpenNew";
 export { default as PancakesIcon } from "./Icons/Pancakes";
 export { default as PencilIcon } from "./Icons/Pencil";
 export { default as PancakeRoundIcon } from "./Icons/PancakeRound";
-export { default as ObsidianRound } from "./Icons/ObsidianRound";
+export { default as ObsidianRound } from "./Icons/Obsidian";
 export { default as ObsidianRoundSml } from "./Icons/ObsidianRoundSml";
 export { default as VChipRound } from "./Icons/vChipRound"
 export { default as BankRound } from "./Icons/BankRound";
