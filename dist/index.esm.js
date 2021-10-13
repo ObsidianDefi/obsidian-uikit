@@ -825,7 +825,7 @@ var Icon$E = function (props) {
 
 var ObsidianRound = function (_a) {
     var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
-    var imgSrc = isDark ? "/images/logo/VenXCapLogoRound.png" : "/images/logo/VenXCapLogoRoundLight.png";
+    var imgSrc = isDark ? "/images/logos/obsidiandemonlogoflat.png" : "/images/logos/obsidianangellogoflat.png";
     return (React.createElement(Svg, __assign({ viewBox: "0 0 92 92" }, props),
         React.createElement("image", { width: "90", height: "90", href: imgSrc })));
 };
@@ -833,7 +833,7 @@ var ObsidianRound$1 = React.memo(ObsidianRound, function (prev, next) { return p
 
 var ObsidianRoundSml = function (_a) {
     var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
-    var imgSrc = isDark ? "/images/logo/ObsidianLogoRound.png" : "/images/logo/ObsidianLogoRoundLight.png";
+    var imgSrc = isDark ? "/images/logos/obsidiandemonlogoflat.png" : "/images/logos/obsidianangellogoflat.png";
     return (React.createElement(Svg, __assign({ viewBox: "0 0 42 42" }, props),
         React.createElement("image", { width: "40", height: "40", href: imgSrc })));
 };

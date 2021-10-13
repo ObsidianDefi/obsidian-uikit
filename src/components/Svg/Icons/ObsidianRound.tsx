@@ -7,7 +7,7 @@ interface LogoProps extends SvgProps {
 }
 
 const ObsidianRound: React.FC<LogoProps> = ({ isDark, ...props }) => {
-  const imgSrc = isDark ? "/images/logo/VenXCapLogoRound.png" : "/images/logo/VenXCapLogoRoundLight.png";
+  const imgSrc = isDark ? "/images/logos/obsidiandemonlogoflat.png" : "/images/logos/obsidianangellogoflat.png";
   return (
     <Svg viewBox="0 0 92 92" {...props}>
         <image width="90" height="90" href={imgSrc}/>
