@@ -3971,7 +3971,7 @@ var BottomNav = function (_a) {
 
 var Logo = function (_a) {
     var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
-    var imgSrc = isDark ? "/images/logo/VXCTopLeftLogoWhtText.png" : "/images/logo/VXCTopLeftLogoBlkText.png";
+    var imgSrc = isDark ? "/images/logos/obsidianlogolongdemonv2.png" : "/images/logos/obsidianlogolongangelv2.png";
     return (React.createElement(Svg, __assign({ viewBox: "0 0 172 41" }, props),
         React.createElement("image", { width: "171", height: "40", href: imgSrc })));
 };
