@@ -53,9 +53,9 @@ export interface MenuEntry {
 export interface PanelProps {
   isDark: boolean;
   toggleTheme: (isDark: boolean) => void;
-  vxcPriceUsd?: number;
-  vchipPriceUsd?: number;
-  bankPriceUsd?: number;
+  obsnPriceUsd?: number;
+  token2PriceUsd?: number;
+  token3PriceUsd?: number;
   spotLightPriceUsd?: number;
   currentLang: string;
   langs: Language[];
@@ -69,15 +69,15 @@ export interface NavProps extends PanelProps {
   profile?: Profile;
   // userMenu?: ReactElement;
   // globalMenu?: ReactElement;
-  vxcPriceUsd?: number;
-  vchipPriceUsd?: number;
-  bankPriceUsd?: number;
+  obsnPriceUsd?: number;
+  token2PriceUsd?: number;
+  token3PriceUsd?: number;
   links: Array<MenuItemsType>;
   subLinks: Array<SubMenuItemsType>;
   footerLinks: Array<FooterLinkType>;
   activeItem: string;
   activeSubItem: string;
-  buyVXCLabel: string;
+  buyObsnLabel: string;
   logout: () => void;
 }
 
@@ -94,9 +94,9 @@ export interface TNavProps {
   cakePriceUsd?: number;
   currentLang: string;
   buyCakeLabel: string;
-  vxcPriceUsd?: number;
-  vchipPriceUsd?: number;
-  bankPriceUsd?: number;
+  obsnPriceUsd?: number;
+  token2PriceUsd?: number;
+  token3PriceUsd?: number;
   spotLightPriceUsd?: number;
   langs: Language[];
   setLang: (lang: Language) => void;

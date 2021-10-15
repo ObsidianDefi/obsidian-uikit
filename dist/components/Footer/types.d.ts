@@ -10,12 +10,12 @@ export declare type FooterLinkType = {
 };
 export declare type FooterProps = {
     items: FooterLinkType[];
-    buyVXCLabel: string;
+    buyObsnLabel: string;
     isDark: boolean;
     toggleTheme: (isDark: boolean) => void;
-    vxcPriceUsd?: number;
-    vchipPriceUsd?: number;
-    bankPriceUsd?: number;
+    obsnPriceUsd?: number;
+    token2PriceUsd?: number;
+    token3PriceUsd?: number;
     currentLang: string;
     langs: Language[];
     setLang: (lang: Language) => void;

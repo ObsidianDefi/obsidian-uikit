@@ -99,7 +99,7 @@ export const Connected: React.FC = () => {
 export const NotConnected: React.FC = () => {
   return (
     <BrowserRouter>
-      <Menu isDark={false} toggleTheme={noop} langs={langs} setLang={noop} currentLang="EN" links={links} vxcPriceUsd={0.23158668932877668}>
+      <Menu isDark={false} toggleTheme={noop} langs={langs} setLang={noop} currentLang="EN" links={links} obsnPriceUsd={0.23158668932877668}>
         <div>
           <h1>Page body</h1>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -149,7 +149,7 @@ export const WithSubmenuSelected: React.FC = () => {
         langs={langs}
         setLang={noop}
         currentLang="EN"
-        vxcPriceUsd={0.23158668932877668}
+        obsnPriceUsd={0.23158668932877668}
         links={links}
       >
         <div>

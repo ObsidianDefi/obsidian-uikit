@@ -8,7 +8,7 @@ import { Colors } from "../../theme";
 
 interface Props {
   color?: keyof Colors;
-  vxcPriceUsd?: number;
+  obsnPriceUsd?: number;
 }
 
 const PriceLink = styled.a`
@@ -24,16 +24,16 @@ const PriceLink = styled.a`
   }
 `;
 
-const VXCPrice: React.FC<Props> = ({ vxcPriceUsd, color = "textSubtle" }) => {
+const VXCPrice: React.FC<Props> = ({ obsnPriceUsd, color = "textSubtle" }) => {
 const theme = useTheme();
 
-  return vxcPriceUsd ? (
+  return obsnPriceUsd ? (
     <PriceLink
       href="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
       target="_blank"
     >
       <ObsidianRound width="24px" mr="8px" isDark={theme.isDark} />
-      <Text color={color} bold>{`$${vxcPriceUsd.toFixed(7)}`}</Text>
+      <Text color={color} bold>{`$${obsnPriceUsd.toFixed(7)}`}</Text>
     </PriceLink>
   ) : (
     <Skeleton width={80} height={24} />

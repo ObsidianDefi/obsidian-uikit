@@ -19,6 +19,7 @@ import UserBlock from "./UserBlock";
 import { NavProps } from "./types";
 import { MENU_HEIGHT, MOBILE_MENU_HEIGHT } from "./config";
 import LangSelector from "../../components/LangSelector/LangSelector";
+import ThemeSwitcher from "./components/ThemeSwitcher";
 
 const Wrapper = styled.div`
   position: relative;
@@ -79,9 +80,9 @@ const Menu: React.FC<NavProps> = ({
   toggleTheme,
   currentLang,
   setLang,
-  vxcPriceUsd,
-  vchipPriceUsd,
-  bankPriceUsd,
+  obsnPriceUsd,
+  token2PriceUsd,
+  token3PriceUsd,
   // spotLightPriceUsd,
   links,
   subLinks,
@@ -89,7 +90,7 @@ const Menu: React.FC<NavProps> = ({
   activeItem,
   activeSubItem,
   langs,
-  buyVXCLabel,
+  buyObsnLabel,
   children,
 }) => {
   const { isMobile } = useMatchBreakpoints();
@@ -140,15 +141,11 @@ const Menu: React.FC<NavProps> = ({
         {!isMobile && (
           <>
             {/* <Box mr="36px">
-              <VXCPrice vxcPriceUsd={vxcPriceUsd} isDark={theme.isDark} />
-            </Box> */}
-            {/* <Box mr="36px">
-              <VChipPrice vchipPriceUsd={vchipPriceUsd} isDark={theme.isDark} />
-            </Box><Box mr="36px">
-              <BankPrice bankPriceUsd={bankPriceUsd} isDark={theme.isDark} />
+              <Price PriceUsd={obsnPriceUsd} isDark={theme.isDark} />
             </Box> */}
           </>
         )}
+        <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />
         <Box mt="4px">
           <LangSelector
             currentLang={currentLang}
@@ -160,7 +157,7 @@ const Menu: React.FC<NavProps> = ({
           />
         </Box>
         <Flex>
-          <UserBlock account={account} login={login} logout={logout} />
+          {/* Unlock for Farms <UserBlock account={account} login={login} logout={logout} /> */}
           {/* {profile && <Avatar profile={profile} />} */}
         </Flex>
         {/* {globalMenu} {userMenu} */}
@@ -177,10 +174,10 @@ const Menu: React.FC<NavProps> = ({
             langs={langs}
             setLang={setLang}
             currentLang={currentLang}
-            vxcPriceUsd={vxcPriceUsd}
-            vchipPriceUsd={vchipPriceUsd}
-            bankPriceUsd={bankPriceUsd}
-            buyVXCLabel={buyVXCLabel}
+            obsnPriceUsd={obsnPriceUsd}
+            token2PriceUsd={token2PriceUsd}
+            token3PriceUsd={token3PriceUsd}
+            buyObsnLabel={buyObsnLabel}
             mb={[`${MOBILE_MENU_HEIGHT}px`, null, "0px"]}
           />
         </Inner>
@@ -196,7 +193,7 @@ const Menu: React.FC<NavProps> = ({
           langs={langs}
           setLang={setLang}
           currentLang={currentLang}
-          vxcPriceUsd={vxcPriceUsd}
+          obsnPriceUsd={obsnPriceUsd}
           pushNav={setIsPushed}
         />
         <Inner isPushed={isPushed} showMenu={showMenu}>

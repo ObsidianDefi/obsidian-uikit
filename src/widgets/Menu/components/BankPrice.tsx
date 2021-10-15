@@ -5,7 +5,7 @@ import Text from "../../../components/Text/Text";
 import Skeleton from "../../../components/Skeleton/Skeleton";
 
 interface Props {
-  bankPriceUsd?: number;
+  token3PriceUsd?: number;
   isDark: boolean;
 }
 
@@ -22,14 +22,14 @@ const PriceLink = styled.a`
   }
 `;
 
-const BankPrice: React.FC<Props> = ({ bankPriceUsd, isDark }) => {
-  return bankPriceUsd ? (
+const BankPrice: React.FC<Props> = ({ token3PriceUsd, isDark }) => {
+  return token3PriceUsd ? (
     <PriceLink
       href="http://localhost:3000/swap?outputCurrency=0xca7F55bC7cD3ee83e69d3F366062D68617115F3c"
       target="_blank"
     >
       <BankRound width="24px" mr="8px" isDark={isDark} />
-      <Text color="textSubtle" bold>{`$${bankPriceUsd.toFixed(10)}`}</Text>
+      <Text color="textSubtle" bold>{`$${token3PriceUsd.toFixed(10)}`}</Text>
     </PriceLink>
   ) : (
     <Skeleton width={80} height={24} />

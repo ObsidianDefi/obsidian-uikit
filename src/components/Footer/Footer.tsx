@@ -28,10 +28,10 @@ const MenuItem: React.FC<FooterProps> = ({
   currentLang,
   langs,
   setLang,
-  vxcPriceUsd,
-  vchipPriceUsd,
-  bankPriceUsd,
-  buyVXCLabel,
+  obsnPriceUsd,
+  token2PriceUsd,
+  token3PriceUsd,
+  buyObsnLabel,
   ...props
 }) => {
 const theme = useTheme();
@@ -87,13 +87,13 @@ const theme = useTheme();
           </Flex>
           <Flex order={[1, null, 2]} mb={["24px", null, "0"]} justifyContent="space-between" alignItems="center">
             {/* <Box mr="20px">
-              <VXCPrice vxcPriceUsd={vxcPriceUsd} color={darkColors.textSubtle as keyof Colors} />
+              <VXCPrice obsnPriceUsd={obsnPriceUsd} color={darkColors.textSubtle as keyof Colors} />
             </Box> */}
             {/* <Box mr="20px">
-              <VChipPrice vchipPriceUsd={vchipPriceUsd} color={darkColors.textSubtle as keyof Colors} />
+              <VChipPrice token2PriceUsd={token2PriceUsd} color={darkColors.textSubtle as keyof Colors} />
             </Box>
             <Box mr="20px">
-              <BankPrice bankPriceUsd={bankPriceUsd} color={darkColors.textSubtle as keyof Colors} />
+              <BankPrice token3PriceUsd={token3PriceUsd} color={darkColors.textSubtle as keyof Colors} />
             </Box> */}
             <Button
               as="a"
@@ -102,7 +102,7 @@ const theme = useTheme();
               scale="sm"
               endIcon={<ArrowForwardIcon color={lightColors.backgroundAlt} />}
             >
-              {buyVXCLabel}
+              {buyObsnLabel}
             </Button>
           </Flex>
         </StyledToolsContainer>

@@ -5,7 +5,7 @@ import Text from "../../../components/Text/Text";
 import Skeleton from "../../../components/Skeleton/Skeleton";
 
 interface Props {
-  vxcPriceUsd?: number;
+  obsnPriceUsd?: number;
   isDark: boolean;
 }
 
@@ -22,14 +22,14 @@ const PriceLink = styled.a`
   }
 `;
 
-const VXCPrice: React.FC<Props> = ({ vxcPriceUsd, isDark }) => {
-  return vxcPriceUsd ? (
+const VXCPrice: React.FC<Props> = ({ obsnPriceUsd, isDark }) => {
+  return obsnPriceUsd ? (
     <PriceLink
       href="http://localhost:3000/swap?outputCurrency=0xdA94C8c31e2B0426CEf30E42964cE4d3aa9B06d3"
       target="_blank"
     >
       <ObsidianRound width="24px" mr="8px" isDark={isDark} />
-      <Text color="textSubtle" bold>{`$${vxcPriceUsd.toFixed(5)}`}</Text>
+      <Text color="textSubtle" bold>{`$${obsnPriceUsd.toFixed(5)}`}</Text>
     </PriceLink>
   ) : (
     <Skeleton width={80} height={24} />

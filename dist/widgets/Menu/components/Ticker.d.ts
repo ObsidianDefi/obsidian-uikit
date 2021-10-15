@@ -1,6 +1,6 @@
 import React from "react";
 interface Props {
-    vxcPriceUsd?: number;
+    obsnPriceUsd?: number;
     isDark: boolean;
 }
 declare const CryptoTicker: React.FC<Props>;

@@ -1,7 +1,7 @@
 import React, { forwardRef, ComponentPropsWithoutRef, ComponentProps, ComponentPropsWithRef } from "react";
   
 interface Props {
-    vxcPriceUsd?: number;
+    obsnPriceUsd?: number;
     isDark: boolean;
   }
 

@@ -39,7 +39,7 @@ const PanelFooter: React.FC<Props> = ({
   pushNav,
   toggleTheme,
   isDark,
-  vxcPriceUsd,
+  obsnPriceUsd,
   currentLang,
   langs,
   setLang,
@@ -57,7 +57,7 @@ const PanelFooter: React.FC<Props> = ({
   return (
     <Container>
       <SocialEntry>
-        {/* <VXCPrice vxcPriceUsd={vxcPriceUsd} isDark={isDark} /> */}
+        {/* <VXCPrice obsnPriceUsd={obsnPriceUsd} isDark={isDark} /> */}
         <SocialLinks />
       </SocialEntry>
       <SettingsEntry>

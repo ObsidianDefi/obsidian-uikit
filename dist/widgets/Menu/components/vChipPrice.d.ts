@@ -1,6 +1,6 @@
 import React from "react";
 interface Props {
-    vchipPriceUsd?: number;
+    token2PriceUsd?: number;
     isDark: boolean;
 }
 declare const _default: React.NamedExoticComponent<Props>;
