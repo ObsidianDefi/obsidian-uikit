@@ -57,7 +57,7 @@ function __spreadArray(to, from, pack) {
             ar[i] = from[i];
         }
     }
-    return to.concat(ar || Array.prototype.slice.call(from));
+    return to.concat(ar || from);
 }
 
 function __makeTemplateObject(cooked, raw) {
@@ -1520,12 +1520,12 @@ var StyledBreadcrumbs = styled.ul(templateObject_2$p || (templateObject_2$p = __
 var insertSeparators = function (items, separator) {
     return items.reduce(function (accum, item, index) {
         if (index === 0) {
-            return __spreadArray(__spreadArray([], accum, true), [item], false);
+            return __spreadArray(__spreadArray([], accum), [item]);
         }
-        return __spreadArray(__spreadArray([], accum, true), [
+        return __spreadArray(__spreadArray([], accum), [
             React.createElement(Separator, { "aria-hidden": true, key: "seperator-" + index }, separator),
             item,
-        ], false);
+        ]);
     }, []);
 };
 var DefaultSeparator = React.createElement(Icon$1q, { color: "currentColor", width: "24px" });
@@ -1793,7 +1793,7 @@ var Bunny = styled.div(templateObject_2$n || (templateObject_2$n = __makeTemplat
 });
 var FallingBunnies = function (_a) {
     var _b = _a.count, count = _b === void 0 ? 30 : _b, _c = _a.size, size = _c === void 0 ? 32 : _c, _d = _a.iterations, iterations = _d === void 0 ? Infinity : _d, _e = _a.duration, duration = _e === void 0 ? 10 : _e;
-    var bunnies = __spreadArray([], Array(count), true).map(function (_, index) { return (React.createElement(Bunny, { key: String(index), position: Math.random() * 100, iterations: iterations, duration: duration },
+    var bunnies = __spreadArray([], Array(count)).map(function (_, index) { return (React.createElement(Bunny, { key: String(index), position: Math.random() * 100, iterations: iterations, duration: duration },
         React.createElement(Icon$1a, { width: size, height: size }))); });
     return React.createElement("div", null, bunnies);
 };
@@ -2535,7 +2535,7 @@ var byTextDescending = function (getTextProperty) {
 
 var sortByColumn = function (data, sortColumn, columns) {
     var isAscending = null;
-    var sortedRows = __spreadArray([], data, true);
+    var sortedRows = __spreadArray([], data);
     columns.forEach(function (column) {
         // if the row was found
         if (sortColumn === column.name) {
@@ -2587,7 +2587,7 @@ var createReducer = function () {
         var rowIds = {};
         switch (action.type) {
             case "SET_ROWS":
-                rows = __spreadArray([], action.data, true);
+                rows = __spreadArray([], action.data);
                 // preserve sorting if a sort is already enabled when data changes
                 if (state.sortColumn) {
                     rows = sortByColumn(action.data, state.sortColumn, state.columns);
@@ -2810,7 +2810,7 @@ var useTable = function (columns, data, options) {
         return __spreadArray([], state.columns.map(function (column) {
             var label = column.label ? column.label : column.name;
             return __assign(__assign({}, column), { render: makeHeaderRender(label, column.headerRender) });
-        }), true);
+        }));
     }, [state.columns]);
     useEffect(function () {
         if (options && options.filter) {
@@ -3406,7 +3406,7 @@ var darkTheme = __assign(__assign({}, base), { isDark: true, alert: dark$7, colo
 var lightTheme = __assign(__assign({}, base), { isDark: false, alert: light$7, colors: lightColors, card: light$6, toggle: light$3, nav: light$2, modal: light$1, pancakeToggle: light$5, radio: light$4, tooltip: light });
 
 var isTouchDevice = function () {
-    return "ontouchstart" in window || navigator.maxTouchPoints > 0; // || navigator.msMaxTouchPoints > 0;
+    return "ontouchstart" in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
 };
 
 var Arrow = styled.div(templateObject_1$l || (templateObject_1$l = __makeTemplateObject(["\n  &,\n  &::before {\n    position: absolute;\n    width: 10px;\n    height: 10px;\n    border-radius: 2px;\n    z-index: -1;\n  }\n\n  &::before {\n    content: \"\";\n    transform: rotate(45deg);\n    background: ", ";\n  }\n"], ["\n  &,\n  &::before {\n    position: absolute;\n    width: 10px;\n    height: 10px;\n    border-radius: 2px;\n    z-index: -1;\n  }\n\n  &::before {\n    content: \"\";\n    transform: rotate(45deg);\n    background: ", ";\n  }\n"])), function (_a) {
@@ -4060,7 +4060,7 @@ var socials = [
         href: "https://github.com/pancakeswap/",
     },
 ];
-__spreadArray([], Array(20), true).map(function (_, i) { return ({
+__spreadArray([], Array(20)).map(function (_, i) { return ({
     code: "en" + i,
     language: "English" + i,
     locale: "Locale" + i,
@@ -4963,7 +4963,7 @@ var getPreferredConfig = function (walletConfig) {
     }
     return __spreadArray([
         preferredWallet
-    ], sortedConfig.filter(function (sortedWalletConfig) { return sortedWalletConfig.title !== preferredWalletName; }), true);
+    ], sortedConfig.filter(function (sortedWalletConfig) { return sortedWalletConfig.title !== preferredWalletName; }));
 };
 var ConnectModal = function (_a) {
     var login = _a.login, _b = _a.onDismiss, onDismiss = _b === void 0 ? function () { return null; } : _b, _c = _a.displayCount, displayCount = _c === void 0 ? 3 : _c;
