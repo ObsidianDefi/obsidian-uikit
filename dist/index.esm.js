@@ -4086,11 +4086,11 @@ var SocialLinks = function (_a) {
 var SocialLinks$1 = React.memo(SocialLinks, function () { return true; });
 
 var StyledFooter = styled(Flex$1)(templateObject_1$d || (templateObject_1$d = __makeTemplateObject(["\n  background: ", ";\n"], ["\n  background: ", ";\n"])), darkColors.backgroundAlt);
-var StyledList = styled.ul(templateObject_2$6 || (templateObject_2$6 = __makeTemplateObject(["\n  list-style: none;\n  margin-bottom: 40px;\n\n  ", " {\n    margin-bottom: 0px;\n  }\n"], ["\n  list-style: none;\n  margin-bottom: 40px;\n\n  ", " {\n    margin-bottom: 0px;\n  }\n"])), function (_a) {
+styled.ul(templateObject_2$6 || (templateObject_2$6 = __makeTemplateObject(["\n  list-style: none;\n  margin-bottom: 40px;\n\n  ", " {\n    margin-bottom: 0px;\n  }\n"], ["\n  list-style: none;\n  margin-bottom: 40px;\n\n  ", " {\n    margin-bottom: 0px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.md;
 });
-var StyledListItem = styled.li(templateObject_3$2 || (templateObject_3$2 = __makeTemplateObject(["\n  font-size: 16px;\n  margin-bottom: 8px;\n  text-transform: capitalize;\n\n  &:first-child {\n    color: ", ";\n    font-weight: 600;\n    text-transform: uppercase;\n  }\n"], ["\n  font-size: 16px;\n  margin-bottom: 8px;\n  text-transform: capitalize;\n\n  &:first-child {\n    color: ", ";\n    font-weight: 600;\n    text-transform: uppercase;\n  }\n"])), darkColors.secondary);
+styled.li(templateObject_3$2 || (templateObject_3$2 = __makeTemplateObject(["\n  font-size: 16px;\n  margin-bottom: 8px;\n  text-transform: capitalize;\n\n  &:first-child {\n    color: ", ";\n    font-weight: 600;\n    text-transform: uppercase;\n  }\n"], ["\n  font-size: 16px;\n  margin-bottom: 8px;\n  text-transform: capitalize;\n\n  &:first-child {\n    color: ", ";\n    font-weight: 600;\n    text-transform: uppercase;\n  }\n"])), darkColors.secondary);
 var StyledIconMobileContainer = styled(Box)(templateObject_4$1 || (templateObject_4$1 = __makeTemplateObject(["\n  margin-bottom: 24px;\n"], ["\n  margin-bottom: 24px;\n"])));
 var StyledToolsContainer = styled(Flex$1)(templateObject_5$1 || (templateObject_5$1 = __makeTemplateObject(["\n  border-color: ", ";\n  border-top-width: 1px;\n  border-bottom-width: 1px;\n  border-style: solid;\n  padding: 24px 0;\n  margin-bottom: 24px;\n\n  ", " {\n    border-top-width: 0;\n    border-bottom-width: 0;\n    padding: 0 0;\n    margin-bottom: 0;\n  }\n"], ["\n  border-color: ", ";\n  border-top-width: 1px;\n  border-bottom-width: 1px;\n  border-style: solid;\n  padding: 24px 0;\n  margin-bottom: 24px;\n\n  ", " {\n    border-top-width: 0;\n    border-bottom-width: 0;\n    padding: 0 0;\n    margin-bottom: 0;\n  }\n"])), darkColors.cardBorder, function (_a) {
     var theme = _a.theme;
@@ -4130,25 +4130,12 @@ var LangSelector = function (_a) {
 var LangSelector$1 = React.memo(LangSelector, function (prev, next) { return prev.currentLang === next.currentLang; });
 
 var MenuItem$1 = function (_a) {
-    var items = _a.items, isDark = _a.isDark, toggleTheme = _a.toggleTheme, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang; _a.obsnPriceUsd; _a.token2PriceUsd; _a.token3PriceUsd; var buyObsnLabel = _a.buyObsnLabel, props = __rest(_a, ["items", "isDark", "toggleTheme", "currentLang", "langs", "setLang", "obsnPriceUsd", "token2PriceUsd", "token3PriceUsd", "buyObsnLabel"]);
+    _a.items; var isDark = _a.isDark, toggleTheme = _a.toggleTheme, currentLang = _a.currentLang, langs = _a.langs, setLang = _a.setLang; _a.obsnPriceUsd; _a.token2PriceUsd; _a.token3PriceUsd; var buyObsnLabel = _a.buyObsnLabel, props = __rest(_a, ["items", "isDark", "toggleTheme", "currentLang", "langs", "setLang", "obsnPriceUsd", "token2PriceUsd", "token3PriceUsd", "buyObsnLabel"]);
     useTheme();
     return (React.createElement(StyledFooter, __assign({ p: ["40px 16px", null, "56px 40px 55px 40px"] }, props, { justifyContent: "center" }),
         React.createElement(Flex$1, { flexDirection: "column", width: ["100%", null, "1200px;"] },
             React.createElement(StyledIconMobileContainer, { display: ["block", null, "none"] },
                 React.createElement(ObsidianRound, { isDark: true, width: "130px" })),
-            React.createElement(Flex$1, { order: [2, null, 1], flexDirection: ["column", null, "row"], justifyContent: "space-between", alignItems: "flex-start", mb: ["42px", null, "36px"] }, items === null || items === void 0 ? void 0 :
-                items.map(function (item) {
-                    var _a;
-                    return (React.createElement(StyledList, { key: item.label },
-                        React.createElement(StyledListItem, null, item.label), (_a = item.items) === null || _a === void 0 ? void 0 :
-                        _a.map(function (_a) {
-                            var label = _a.label, href = _a.href, _b = _a.isHighlighted, isHighlighted = _b === void 0 ? false : _b;
-                            return (React.createElement(StyledListItem, { key: label },
-                                React.createElement(Link, { href: href, target: "_black", color: isHighlighted ? baseColors.warning : darkColors.text, bold: false }, label)));
-                        })));
-                }),
-                React.createElement(Box, { display: ["none", null, "block"] },
-                    React.createElement(ObsidianRound, { isDark: true, width: "160px" }))),
             React.createElement(StyledSocialLinks, { order: [2], pb: ["42px", null, "32px"], mb: ["0", null, "32px"] }),
             React.createElement(StyledToolsContainer, { order: [1, null, 3], flexDirection: ["column", null, "row"], justifyContent: "space-between" },
                 React.createElement(Flex$1, { order: [2, null, 1], alignItems: "center" },
