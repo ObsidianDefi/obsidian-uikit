@@ -4085,7 +4085,7 @@ var SocialLinks = function (_a) {
 };
 var SocialLinks$1 = React.memo(SocialLinks, function () { return true; });
 
-var StyledFooter = styled(Flex$1)(templateObject_1$d || (templateObject_1$d = __makeTemplateObject(["\n  background: ", ";\n"], ["\n  background: ", ";\n"])), darkColors.backgroundAlt);
+var StyledFooter = styled(Flex$1)(templateObject_1$d || (templateObject_1$d = __makeTemplateObject(["\n  background: #AAB7BF;\n"], ["\n  background: #AAB7BF;\n"])));
 styled.ul(templateObject_2$6 || (templateObject_2$6 = __makeTemplateObject(["\n  list-style: none;\n  margin-bottom: 40px;\n\n  ", " {\n    margin-bottom: 0px;\n  }\n"], ["\n  list-style: none;\n  margin-bottom: 40px;\n\n  ", " {\n    margin-bottom: 0px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.md;
