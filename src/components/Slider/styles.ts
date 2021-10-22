@@ -23,7 +23,7 @@ const getCursorStyle = ({ disabled = false }: DisabledProp) => {
 
 const getBaseThumbStyles = ({ isMax, disabled }: StyledInputProps) => `
   -webkit-appearance: none;
-  background-image: url(${isMax ? bunnyHeadMax : bunnyHeadMain});
+  background-image: url(${isMax ? bunnyHeadMax : 'static/media/src/components/Svg/Icons/ObsidianRound.svg'});
   background-color: transparent;
   border: 0;
   cursor: ${getCursorStyle};
@@ -55,7 +55,7 @@ export const SliderLabel = styled(Text)<SliderLabelProps>`
 `;
 
 export const BunnyButt = styled.div<DisabledProp>`
-  background: url(${bunnyButt}) no-repeat;
+  background: url('static/media/src/components/Svg/Icons/ObsidianRound.svg') no-repeat;
   height: 32px;
   filter: ${({ disabled }) => (disabled ? "grayscale(100%)" : "none")};
   position: absolute;
