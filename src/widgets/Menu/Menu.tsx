@@ -141,7 +141,7 @@ const Menu: React.FC<NavProps> = ({
         {!isMobile && (
           <>
             {/* <Box mr="36px">
-              <Price PriceUsd={obsnPriceUsd} isDark={theme.isDark} />
+              <OBSNPrice PriceUsd={obsnPriceUsd} isDark={theme.isDark} />
             </Box> */}
           </>
         )}
@@ -157,7 +157,7 @@ const Menu: React.FC<NavProps> = ({
           />
         </Box>
         <Flex>
-          {/* Unlock for Farms <UserBlock account={account} login={login} logout={logout} /> */}
+          <UserBlock account={account} login={login} logout={logout} />
           {/* {profile && <Avatar profile={profile} />} */}
         </Flex>
         {/* {globalMenu} {userMenu} */}
